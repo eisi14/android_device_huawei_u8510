@@ -1,0 +1,62 @@
+# Sample file to extract required files from an original LG P500 device
+# This script is not required if you have the proprietary repository
+#
+# This file is the file list used by extract-files.sh
+
+## CAMERA
+lib/liboemcamera.so
+lib/libcamera.so
+lib/libmmjpeg.so
+lib/libmmipl.so
+
+## BT & WiFi
+lib/modules/dhd.ko
+etc/wifi/firmware.bin
+etc/wifi/firmware_apsta.bin
+etc/firmware/BCM4329.hcd
+
+## HAL
+etc/vold.fstab
+
+# GSP
+lib/hw/gps.default.so
+lib/libloc_api-rpc-qc.so
+
+## RIL & other
+bin/qmuxd
+bin/rild
+
+lib/hw/sensors.default.so
+lib/libaudioeq.so
+lib/libauth.so
+lib/libbcmwl.so
+lib/libcm.so
+lib/libdiag.so
+lib/libdivxdrmdecrypt.so
+lib/libdll.so
+lib/libdsm.so
+lib/libdss.so
+lib/libdsutils.so
+lib/libgsdi_exp.so
+lib/libgstk_exp.so
+lib/libidl.so
+lib/liblgdrm.so
+lib/liblgeat.so
+lib/liblgerft.so
+lib/libmmgsdilib.so
+lib/libnv.so
+lib/liboem_rapi.so
+lib/liboncrpc.so
+lib/libpbmlib.so
+lib/libqmi.so
+lib/libqueue.so
+lib/libril-qc-1.so
+lib/libril-qc-qmi-1.so
+lib/libril-qcril-hook-oem.so
+lib/libril.so
+lib/libsnd.so
+lib/libstagefright_soft_aacdec.so
+lib/libwms.so
+lib/libwmsts.so
+lib/libhwrpc.so
+lib/libcommondefs.so

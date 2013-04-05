@@ -1,0 +1,2 @@
+add_lunch_combo cm_u8510-eng
+add_lunch_combo cm_u8510-userdebug
