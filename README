@@ -13,9 +13,11 @@ Create the configuration to load the u8510 files. Copy/paste it WORKING_DIR/.rep
 <manifest>
   <project path="device/huawei/u8510"          name="eisi14/android_device_huawei_u8510" remote="github" revision="jellybean" />
   <project path="device/huawei/msm7x27-common" name="eisi14/android_device_huawei_msm7x27-common" remote="github" revision="jellybean" />
-  <project path="vendor/huawei/msm7x27"        name="eisi14/android_vendor_huawei_u8510" remote="github" revision="jellybean" />
+  <project path="vendor/huawei/u8510"          name="eisi14/android_vendor_huawei_u8510" remote="github" revision="jellybean" />
   <project path="vendor/huawei/msm7x27-common" name="eisi14/android_vendor_huawei_msm7x27-common" remote="github" revision="jellybean" />
+  <project path="kernel/huawei/msm7x27"        name="eisi14/android_kernel_huawei_msm7x27" remote="github" revision="jellybean" />
 </manifest>
+
 
 
 Load the sources
