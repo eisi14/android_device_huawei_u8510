@@ -8,7 +8,7 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/u8510/overlay
 
 # configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/etc/init.d/01compcache:system/etc/inid.d/01compcache
+    $(LOCAL_PATH)/prebuilt/etc/init.d/01compcache:system/etc/init.d/01compcache
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
