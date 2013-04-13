@@ -6,7 +6,7 @@ on early-init
     # for backwards compatibility
 #    symlink /mnt/sdcard /sdcard
 
-service dhcp-service /system/bin/netcfg wlan0 dhcp
+service dhcp-service /system/bin/netcfg eth0 dhcp
     class main
     oneshot
 
@@ -16,6 +16,32 @@ on property:dev.bootcomplete=1
     
 on boot-pause
     exec system/bin/battery_charging
+
+on post-fs
+    mkdir /data/HWUserData 0777 system system
+    mount yaffs2 mtd@userdata2 /data/HWUserData nosuid nodev
+    chown system system /data/HWUserData
+    chmod 0777 /data/HWUserData
+    
+    mkdir /data/HWUserData/Pictures 0777 system system
+    chown system system /data/HWUserData/Pictures
+    chmod 0777 /data/HWUserData/Pictures
+    
+    mkdir /data/HWUserData/Videos 0777 system system
+    chown system system /data/HWUserData/Videos
+    chmod 0777 /data/HWUserData/Videos
+    
+    mkdir /data/HWUserData/Recordings 0777 system system
+    chown system system /data/HWUserData/Recordings
+    chmod 0777 /data/HWUserData/Recordings
+    
+    mkdir /data/HWUserData/ContactIcons 0777 system system
+    chown system system /data/HWUserData/ContactIcons
+    chmod 0777 /data/HWUserData/ContactIcons
+    mkdir /data/tmp 0777 system system
+    
+    chown system system /data/HWUserData/sd.img
+    mount vfat loop@data/HWUserData/sd.img /HWUserData umask=0002,uid=1000,gid=1015,utf8
 
 on boot
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
@@ -91,6 +117,11 @@ on boot
     chown system system /sys/devices/platform/msm_hsusb/gadget/fixusb
     chown system sdcard_rw /sys/touch_screen/update_firmware
 
+    chown system system /sys/devices/platform/android_usb/composition
+    chown system system /sys/devices/platform/android_usb/remote_wakeup
+    chown system system /sys/devices/platform/msm_hsusb/gadget/sdstatus
+    chown system system /sys/devices/platform/msm_hsusb/gadget/switchusb
+    chown system system /sys/devices/platform/msm_hsusb/gadget/fixusb
 
 # Temporary hack to prevent framebuffer flicker
     chmod 0777 /sys/class/graphics/fb0/state
