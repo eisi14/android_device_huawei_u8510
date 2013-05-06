@@ -15,12 +15,5 @@
     <!-- Values greater or equal to 0 will enable electronbeam screen-on
          animation with the specified delay (in milliseconds), -1 will disable the animation -->
     <integer name="config_screenOnAnimation">250</integer>
-
-    <!-- Enable/disable default bluetooth profiles:
-        HSP_AG, ObexObjectPush, Audio, NAP -->
-    <bool name="config_bluetooth_default_profiles">false</bool>
-
-    <bool name="config_automatic_brightness_available">true</bool>
-
 </resources>
 
