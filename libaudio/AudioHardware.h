@@ -167,7 +167,7 @@ public:
 
     virtual status_t    setVoiceVolume(float volume);
     virtual status_t    setMasterVolume(float volume);
-#ifdef HAVE_FM_RADIO
+#ifdef QCOM_FM_ENABLED
     virtual status_t    setFmVolume(float volume);
 #endif
     virtual status_t    setMode(int mode);
@@ -182,9 +182,6 @@ public:
     // create I/O streams
     virtual AudioStreamOut* openOutputStream(
                                 uint32_t devices,
-#ifdef QCOM_HARDWARE
-                                audio_output_flags_t flags,
-#endif
                                 int *format=0,
                                 uint32_t *channels=0,
                                 uint32_t *sampleRate=0,

@@ -216,9 +216,6 @@ status_t AudioHardware::initCheck()
 
 AudioStreamOut* AudioHardware::openOutputStream(
         uint32_t devices, 
-#ifdef QCOM_HARDWARE
-                                audio_output_flags_t flags,
-#endif
         int *format, uint32_t *channels, uint32_t *sampleRate, status_t *status)
 {
     { // scope for the lock
