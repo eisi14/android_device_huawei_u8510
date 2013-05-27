@@ -1,5 +1,0 @@
-#/system/bin/sh
-modprobe zram                  
-echo 1 > /sys/block/zram0/reset
-/system/bin/handle_compcache 
-
