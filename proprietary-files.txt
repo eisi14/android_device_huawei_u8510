@@ -3,60 +3,54 @@
 #
 # This file is the file list used by extract-files.sh
 
+## RIL
+bin/qmuxd
+etc/flex/flex.xml
+## OLDBB != NEWBB
+lib/libgstk_exp.so
+lib/libpbmlib.so
+lib/libwms.so
+## OLDBB = NEWBB
+lib/libqmi.so
+lib/libmmgsdilib.so
+lib/libril-qcril-hook-oem.so
+lib/libdsm.so
+lib/liboncrpc.so
+lib/libril-qc-qmi-1.so
+lib/libnv.so
+lib/libauth.so
+lib/libdiag.so
+lib/liboem_rapi.so
+lib/libgsdi_exp.so
+lib/libril-qc-1.so
+lib/liblgeat.so
+lib/libcm.so
+lib/libqueue.so
+lib/liblgerft.so
+lib/libdss.so
+lib/libdll.so
+lib/libbcmwl.so
+lib/libwmsts.so
+lib/libdsutils.so
+lib/libidl.so
+lib/liblgdrm.so
+lib/libsnd.so
+
+## AUDIO
+lib/libaudioeq.so
+
 ## CAMERA
-lib/liboemcamera.so
 lib/libcamera.so
+lib/liboemcamera.so
 lib/libmmjpeg.so
 lib/libmmipl.so
 
 ## BT & WiFi
-lib/modules/dhd.ko
-etc/wifi/firmware.bin
-etc/wifi/firmware_apsta.bin
-etc/firmware/BCM4329.hcd
+etc/firmware/BCM4325D1_004.002.004.0218.0248.hcd
+etc/wl/rtecdc.bin
+etc/wl/rtecdc-apsta.bin
+etc/wl/rtecdc-mfgtest.bin
 
 ## HAL
-etc/vold.fstab
-
-# GSP
-lib/hw/gps.default.so
-lib/libloc_api-rpc-qc.so
-
-## RIL & other
-bin/qmuxd
-bin/rild
-
-lib/hw/sensors.default.so
-lib/libaudioeq.so
-lib/libauth.so
-lib/libbcmwl.so
-lib/libcm.so
-lib/libdiag.so
-lib/libdivxdrmdecrypt.so
-lib/libdll.so
-lib/libdsm.so
-lib/libdss.so
-lib/libdsutils.so
-lib/libgsdi_exp.so
-lib/libgstk_exp.so
-lib/libidl.so
-lib/liblgdrm.so
-lib/liblgeat.so
-lib/liblgerft.so
-lib/libmmgsdilib.so
-lib/libnv.so
-lib/liboem_rapi.so
-lib/liboncrpc.so
-lib/libpbmlib.so
-lib/libqmi.so
-lib/libqueue.so
-lib/libril-qc-1.so
-lib/libril-qc-qmi-1.so
-lib/libril-qcril-hook-oem.so
-lib/libril.so
-lib/libsnd.so
-lib/libstagefright_soft_aacdec.so
-lib/libwms.so
-lib/libwmsts.so
-lib/libhwrpc.so
-lib/libcommondefs.so
+bin/ami304d
+lib/hw/sensors.p500.so

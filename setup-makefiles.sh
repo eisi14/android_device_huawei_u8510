@@ -1,10 +1,8 @@
 #!/bin/sh
 
-VENDOR=huawei
-DEVICE=u8510
-COMMON=msm7x27-common
+VENDOR=lge
+DEVICE=p500
 OUTDIR=vendor/$VENDOR/$DEVICE
-OUTCOMMON=vendor/$VENDOR/$COMMON
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2012 The CyanogenMod Project
@@ -30,7 +28,6 @@ OUTCOMMON=vendor/$VENDOR/$COMMON
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ######################    DEPENDENCY SECTION  #######################
 PRODUCT_COPY_FILES += \\
-    $OUTDIR/proprietary/lib/libril.so:obj/lib/libril.so \\
     $OUTDIR/proprietary/lib/libmmipl.so:obj/lib/libmmipl.so \\
     $OUTDIR/proprietary/lib/libmmjpeg.so:obj/lib/libmmjpeg.so \\
     $OUTDIR/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
@@ -71,10 +68,8 @@ done
 
 
 # Pick up overlay for features that depend on non-open-source files
-DEVICE_PACKAGE_OVERLAYS := vendor/$VENDOR/$COMMON/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/$VENDOR/$DEVICE/overlay
 
-\$(call inherit-product, $OUTCOMMON/$COMMON-vendor-blobs.mk)
 \$(call inherit-product, $OUTDIR/$DEVICE-vendor-blobs.mk)
 EOF
 
